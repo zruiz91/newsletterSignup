@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Success</title>
+    <title>Failure</title>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
         integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
         crossorigin="anonymous"></script>
@@ -19,8 +19,12 @@
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Good Job</h1>
-            <p class="lead">yeehaw.</p>
+            <h1 class="display-4">Oh No</h1>
+            <p class="lead">somethings amiss</p>
+
+            <form action="/failure" method="post">
+                <button class="btn btn-lg btn-warning">Try Again</button>
+            </form>
         </div>
     </div>
 </body>
