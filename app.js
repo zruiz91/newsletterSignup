@@ -9,8 +9,13 @@ const https = require('https');
 
 const app = express();
 
-app.listen(3000);
+app.use(express.static("public"));
+
+app.listen(3000, function() {
+    console.log('listening on 30000.');
+
+});
 
 app.get('/', function(req, res) {
-    console.log('listening on 30000.');
+    res.sendFile(__dirname + '/signup.html');
 });
