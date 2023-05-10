@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log('listening on 30000.');
 
 });
@@ -47,11 +47,11 @@ app.post('/', function (req, res) {
 
     const jsonData = JSON.stringify(data);
 
-    const url = "https://us21.api.mailchimp.com/3.0/lists/x";
+    const url = "https://us21.api.mailchimp.com/3.0/lists/bf207e9252";
 
     const options = {
         method: 'POST',
-        auth: "zruiz91:x"
+        auth: "zruiz91:356310c2ef7dd62294e8cdbc46d3a31b-us21"
     }
 
     const request = https.request(url, options, function (response) {
@@ -76,3 +76,8 @@ app.post('/failure', function(req, res) {
     res.sendFile(__dirname + "/signup.html")
 });
 
+// api key
+// 356310c2ef7dd62294e8cdbc46d3a31b-us21
+
+//unique id
+// bf207e9252
